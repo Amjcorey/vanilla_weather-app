@@ -9,8 +9,10 @@
     <title>Weather App</title>
 </head>
 <body>
-    <div class="weather-app">
-        <div class="container">
+    <div class="container">
+        <div class="weather-app-wrapper">
+             <div class="weather-app">
+            <div class="location-overview">
             <h1 id="city">
                Seattle
             </h1>
@@ -22,12 +24,22 @@
                     Rain
                 </li>
             </ul>
+        </div>
             <div class="row">
-                <div class="col-md-6">
-                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain.png" alt="Rain">
-                    44°F | °C
+                <div class="col-6">
+                    <div class="clearfix weather-temperature">
+                        <img 
+                        src="https://ssl.gstatic.com/onebox/weather/64/rain.png" 
+                        alt="Rain"
+                        class="float-left"
+                        />
+                        <div class="float-left">
+                        <strong>44</strong> 
+                        °F | °C                            
+                        </div>
+                    </div>
                 </div>
-            <div class="col-md-6">
+            <div class="col-6">
                 <ul>
                     <li>
                         Precipitation: 95%
@@ -40,15 +52,18 @@
                     </li>
                 </ul>
             </div>
-            </div>
-            <small>
+        </div>
+    </div>
+    </div>
+       
+              <small>
                <a href="https://github.com/Amjcorey/vanilla_weather-app" target="_blank">
                 Open-sourced code
             </a>
              by Amanda Corey
             </small>
-                </div>
-    </div>
+      
+    </div> 
     
     <script src="src/app.js"></script>
 </body>
