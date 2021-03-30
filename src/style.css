@@ -53,3 +53,9 @@ li {
     font-weight: 400;
     line-height: 1;
 }
+
+.weather-temperature .units {
+    position: relative;
+    font-size: 16px;
+    top: -32px;
+}
