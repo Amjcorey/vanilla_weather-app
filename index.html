@@ -23,11 +23,9 @@
                     </h1>
                     <ul>
                         <li>
-                        Sunday 12:45
+                            Sunday 12:45
                         </li>
-                        <li>
-                        Rain
-                        </li>
+                        <li id="description"></li>
                      </ul>
         </div>
             <div class="row">
@@ -39,22 +37,20 @@
                         class="float-left"
                         />
                         <div class="float-left">
-                            <strong>44</strong><span class="units">°C | <a href="#" id="">°F</a></span>
+                            <strong id="temperature"></strong><span class="units">°C | <a href="#" id="">°F</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
-                    <ul>
-                      <li>
-                            Precipitation: 95%
-                        </li>
-                      <li>
-                        Humidity: 86%
-                      </li>
-                     <li>
-                        Wind: 13 mph
-                     </li>
-                    </ul>
+                    <div>
+                        <ul>
+                            <li>
+                                    Precipitation: 95%
+                                </li>
+                            <li>Humidity: <span id="humidity"></span>%</li>
+                            <li>Wind: <span id="wind"></span> mph</li>
+                        </ul>
+                 </div>
                 </div>
             </div>
         </div>
