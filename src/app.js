@@ -10,7 +10,7 @@ function formatDate(timestamp) {
         "Friday", 
         "Saturday"
     ];
-    let day =days[date.getDay()];
+    let day = days[date.getDay()];
     return `${day} ${formatHours(timestamp)}`;
 }
 
@@ -31,7 +31,7 @@ function formatHours(timestamp) {
 
 
 
-function displayTemperature(response){
+function displayTemperature(response)   {
 
 
     console.log(response.data.main.temp);
