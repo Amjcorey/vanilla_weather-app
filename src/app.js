@@ -1,3 +1,4 @@
+//Date and Time
 function formatDate(timestamp) {
     let date = new Date(timestamp);
 
@@ -39,8 +40,8 @@ function formatHours(timestamp) {
   
 
 
-
-function displayTemperature(response)   {
+//Temperature, humidity, wind, and icon
+function displayTemperature(response) {
 
 
     console.log(response.data.main.temp);
@@ -67,9 +68,22 @@ function displayTemperature(response)   {
 
 }
 
-let apiKey= "70de72ce25d0801c193edd1d17ced422";
-let city = "Seattle";
-let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+//Search & Axios data
+function search(city) {
+  let apiKey= "70de72ce25d0801c193edd1d17ced422";
+  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-console.log(apiUrl);
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event)  {
+  event.preventDefault();
+  let inputCityElement = document.querySelector("#input-city");
+  search(inputCityElement.value);
+}
+
+search("Seattle");
+
+
+// Handle Submit Search
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);

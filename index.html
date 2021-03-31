@@ -17,6 +17,24 @@
     <div class="container">
         <div class="weather-app-wrapper">
              <div class="weather-app">
+                 <form id="search-form" class="mb-3">
+                     <div class="row">
+                         <div class="col-6">
+                            <input 
+                            type="search" 
+                            placeholder="Search by city..." 
+                            class="form-control"
+                            id="input-city"
+                            autocomplete="off">
+                        </div>
+                    <div class="col-3">
+                        <input 
+                        type="submit" 
+                        value="Search"
+                        class="btn btn-primary w-100">
+                    </div>
+                    </div>
+                 </form>
                 <div class="location-overview">
                     <h1 id="city">
                     Seattle
@@ -26,7 +44,6 @@
                         <li id="description"></li>
                      </ul>
         </div>
-        <br>
             <div class="row">
                 <div class="col-6">
                     <div class="clearfix weather-temperature">
@@ -47,7 +64,24 @@
                             <li>Humidity: <span id="humidity"></span>%</li>
                             <li>Wind: <span id="wind"></span> mph</li>
                         </ul>
-                 </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-group" id="forecast">
+                <div class="card">
+                    <img src="" alt="">
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                </div>
+                <div class="card">
+                    <img src="" alt="">
                 </div>
             </div>
         </div>
