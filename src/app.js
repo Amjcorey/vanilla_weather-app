@@ -68,7 +68,33 @@ function displayTemperature(response) {
 
 }
 
-//Search & Axios data
+
+ //Current Location
+ function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+
+//Fahrenheit and Celcius
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperaturElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+//Search City & Axios data
 function search(city) {
   let apiKey= "70de72ce25d0801c193edd1d17ced422";
   let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -87,3 +113,7 @@ search("Seattle");
 // Handle Submit Search
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+//Current Location Button Event
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);

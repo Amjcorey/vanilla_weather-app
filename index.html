@@ -27,14 +27,20 @@
                             id="input-city"
                             autocomplete="off">
                         </div>
-                    <div class="col-3">
-                        <input 
-                        type="submit" 
-                        value="Search"
-                        class="btn btn-primary w-100">
-                    </div>
+                        <div class="col-3">
+                            <input 
+                            type="submit" 
+                            value="Search"
+                            class="btn btn-primary w-100">
+                        </div>
+                        <div class="col-3">
+                            <button class= "btn btn-success" id="current-location-button">
+                            <small>Location 📍</small> 
+                            </button>
+                        </div>
                     </div>
                  </form>
+                 
                 <div class="location-overview">
                     <h1 id="city">
                     Seattle
@@ -54,7 +60,8 @@
                         class="float-left"
                         />
                         <div class="float-left">
-                            <strong id="temperature"></strong><span class="units">°C | <a href="#" id="">°F</a></span>
+                            <strong id="temperature"></strong
+                                ><span class="units"> <a href="#">°C</a> | <a href="#" id="">°F</a></span>
                         </div>
                     </div>
                 </div>
@@ -67,33 +74,104 @@
                     </div>
                 </div>
             </div>
+            
+
             <div class="card-group" id="forecast">
+
                 <div class="card">
-                    <img src="" alt="">
+                  <div class="card-body">
+                    <div class="weather-forcast-date">Friday</div>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" 
+                    alt=""
+                    width="36px">
+                    <div class="forecast-temperature">
+                        <span class="weather-forecast-temperature-max">
+                        10°
+                    </span>
+                     <span class="weather-forecast-temperature-min">
+                        6°
+                    </span>
+                    </div>
+                  </div>
                 </div>
+          
                 <div class="card">
-                    <img src="" alt="">
+                  <div class="card-body">
+                    <div class="weather-forcast-date">Friday</div>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" 
+                    alt=""
+                    width="36px">
+                    <div class="forecast-temperature">
+                        <span class="weather-forecast-temperature-max">
+                        10°
+                    </span>
+                     <span class="weather-forecast-temperature-min">
+                        6°
+                    </span>
+                    </div>
+                  </div>
                 </div>
+          
                 <div class="card">
-                    <img src="" alt="">
+                  <div class="card-body">
+                    <div class="weather-forcast-date">Friday</div>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" 
+                    alt=""
+                    width="36px">
+                    <div class="forecast-temperature">
+                        <span class="weather-forecast-temperature-max">
+                        10°
+                    </span>
+                     <span class="weather-forecast-temperature-min">
+                        6°
+                    </span>
+                    </div>
+                  </div>
                 </div>
+          
                 <div class="card">
-                    <img src="" alt="">
+                  <div class="card-body">
+                    <div class="weather-forcast-date">Friday</div>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" 
+                    alt=""
+                    width="36px">
+                    <div class="forecast-temperature">
+                        <span class="weather-forecast-temperature-max">
+                        10°
+                    </span>
+                     <span class="weather-forecast-temperature-min">
+                        6°
+                    </span>
+                    </div>
+                  </div>
                 </div>
+          
                 <div class="card">
-                    <img src="" alt="">
+                  <div class="card-body">
+                    <div class="weather-forcast-date">Friday</div>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" 
+                    alt=""
+                    width="36px">
+                    <div class="forecast-temperature">
+                        <span class="weather-forecast-temperature-max">
+                        10°
+                    </span>
+                     <span class="weather-forecast-temperature-min">
+                        6°
+                    </span>
+                    </div>
+                  </div>
                 </div>
-            </div>
+
         </div>
     </div>
-       
+       <footer>
               <small>
                <a href="https://github.com/Amjcorey/vanilla_weather-app" target="_blank">
-                Open-sourced code
-            </a>
-             by Amanda Corey
+                Open-sourced code</a>
+            by Amanda Corey
             </small>
-      
+        </footer>
 </div> 
     
  <script src="src/app.js"></script>

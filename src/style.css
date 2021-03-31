@@ -29,6 +29,10 @@ li:first-letter   {
     text-transform: capitalize;
 }
 
+footer {
+    text-align: center;
+}
+
 .weather-app-wrapper {
     max-width: 800px;
     margin: 20px auto;   
@@ -62,4 +66,39 @@ li:first-letter   {
     position: relative;
     font-size: 16px;
     top: -32px;
+}
+
+.weather-temperature .active {
+    color: rgb(33, 33, 33);
+    cursor: default;
+}
+
+.weather-temperature .active:hover {
+    text-decoration: none;
+}
+
+.card   {
+    margin-top: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.card-title {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(39,33,66,.4);
+}
+
+.card-body  {
+    font-size: 14px;
+}
+
+.weather-forecast {
+    font-size: 16px;
+    opacity: 0.5;
+  }
+
+.weather-forecast-temperature-min   {
+    opacity: .5;
 }
