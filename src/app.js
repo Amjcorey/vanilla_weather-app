@@ -38,12 +38,46 @@ function formatHours(timestamp) {
     return days[day];
   }
   
+//Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  
+  let days = ["Thru", "Fri", "Sat"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function(day){
+ forecastHTML= 
+    forecastHTML + 
+    `
+        <div class="col-2">
+            <div class="weather-forcast-date">${day}</div>
+                <img 
+                src="http://openweathermap.org/img/wn/01n@2x.png" 
+                alt=""
+                width="36px"
+                />
+                <div class="forecast-temperature">
+                <span class="weather-forecast-temperature-max">
+                    10°
+                </span>
+                <span class="weather-forecast-temperature-min">
+                    6°
+                </span>
+              </div>
+        </div>
+    `;
+  })
+ 
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML; 
+
+}
+
+
 
 
 //Temperature, humidity, wind, and icon
 function displayTemperature(response) {
-
-
     console.log(response.data.main.temp);
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
@@ -52,6 +86,8 @@ function displayTemperature(response) {
     let windElement = document.querySelector("#wind");
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#icon");
+
+  
 
 
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -107,7 +143,11 @@ function handleSubmit(event)  {
   search(inputCityElement.value);
 }
 
-search("Seattle");
+
+
+let celsiusTemperature = null;
+
+
 
 
 // Handle Submit Search
@@ -117,3 +157,13 @@ form.addEventListener("submit", handleSubmit);
 //Current Location Button Event
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+// let fahrenheitLink = document.querySelector("#fahrenheit-link");
+// fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+// let celciusLink = document.querySelector("#celcius-link");
+// celciusLink.addEventListener("click", displayCelsius);
+
+search("Seattle");
+displayForecast();
+ 
