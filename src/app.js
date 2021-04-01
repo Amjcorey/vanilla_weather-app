@@ -46,13 +46,17 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
+ // forecastElement.innerHTML = null;
+ // let forecast = null;
+
+ // for (let index = 0; index < 6; index++)
   
   let days = ["Thru", "Fri", "Sat"];
   let forecastHTML = `<div class="row">`;
   days.forEach(function (forecastDay, index) {
    if (index < 6 ) {
-    forecastHTML= 
-        forecastHTML + 
+    forecastHTML += 
+       // forecastHTML + 
         `
             <div class="col-2">
                 <div class="weather-forcast-date">${formatDay(forecastDay.dt)}</div>
@@ -129,9 +133,12 @@ function search(city) {
 }
 
 //Current Location
- function getCurrentLocation(event) {
- event.preventDefault();
- navigator.geolocation.getCurrentPosition(search);
+ function searchCurrentLocation(position) {
+ let latitude = position.coord.latitude;
+ let longitude = position.coord.longitude;
+ let apiKey = "70de72ce25d0801c193edd1d17ced422";
+ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+ axios.get(apiUrl).then(searchCurrentLocation);
 }
 
 function handleSubmit(event)  {
@@ -170,7 +177,7 @@ form.addEventListener("submit", handleSubmit);
 
 //Current Location Button Event
 let currentLocationButton = document.querySelector("#current-location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
+currentLocationButton.addEventListener("click", searchCurrentLocation);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
