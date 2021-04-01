@@ -29,6 +29,10 @@ li:first-letter   {
     text-transform: capitalize;
 }
 
+a   {
+    text-decoration: none;
+}
+
 footer {
     text-align: center;
 }
