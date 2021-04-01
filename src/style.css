@@ -1,5 +1,8 @@
+
 body {
 font-family: Arial, sans-serif;
+background-color: aquamarine;
+
 }
 
 h1 {
@@ -46,6 +49,7 @@ footer {
     border: 1px solid #ced4da;
     border-radius: 5px;
     padding: 25px;
+    background-color: azure;
 }
 
 .location-overview {
