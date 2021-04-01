@@ -87,16 +87,14 @@ footer {
     color: #000;
 }
 
-.card-title {
+.weather-forecast-date {
+    margin-top: 20px;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
     color: rgba(39,33,66,.4);
 }
 
-.card-body  {
-    font-size: 14px;
-}
 
 .weather-forecast {
     font-size: 16px;
