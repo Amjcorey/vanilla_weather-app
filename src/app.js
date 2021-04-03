@@ -64,7 +64,7 @@ function displayForecast(response) {
                     ${Math.round(forecastDay.temp.max)}°
                     </span>
                     <span class="weather-forecast-temperature-min">
-                      ${Math.round(forecastDay.temp.min)}°
+                    ${Math.round(forecastDay.temp.min)}°
                     </span>
                   </div>
             </div>
@@ -115,7 +115,6 @@ function displayTemperature(response) {
     
 
     getForecast(response.data.coord);
-    
 }
 
  
@@ -199,5 +198,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 search("Seattle");
-//displayForecast();
- 
