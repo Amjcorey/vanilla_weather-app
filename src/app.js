@@ -146,7 +146,7 @@ function geoCityLocation(response) {
 }
 
 function getCurrentPosition(event) {
-  event.preventDefault();
+event.preventDefault();
 button.addEventListener("click", getCurrentPosition);
 }
 
