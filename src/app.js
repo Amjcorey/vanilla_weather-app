@@ -147,9 +147,8 @@ function geoCityLocation(response) {
 
 function getCurrentPosition(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchCurrentLocation);
+button.addEventListener("click", getCurrentPosition);
 }
-
 
 function handleSubmit(event)  {
   event.preventDefault();
