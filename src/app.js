@@ -146,9 +146,10 @@ function geoCityLocation(response) {
 }
 
 function getCurrentPosition(event) {
-event.preventDefault();
-button.addEventListener("click", getCurrentPosition);
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchCurrentLocation);
 }
+
 
 function handleSubmit(event)  {
   event.preventDefault();
@@ -170,7 +171,7 @@ function displayFahrenheit(event) {
 function displayCelsius(event) { 
   event.preventDefault();
   celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
+  button.addEventListener("click", getCurrentPosition);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
