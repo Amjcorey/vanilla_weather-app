@@ -1,4 +1,6 @@
 # vanilla_weather-app
 
 SheCodes project. 
-TBA
+
+Using weather api. 
+More advanced version of the weather-app using JS.
